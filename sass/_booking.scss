@@ -1,0 +1,336 @@
+/***MY BOOKING***/
+
+.g-content {
+    flex-grow: 5;
+    overflow: auto;
+    padding: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    width: 60%;
+
+    &__booking__popup__background{
+        width: 80%;
+        height: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        position: fixed;
+        z-index: 10000;
+        backdrop-filter: blur(4px);
+        margin-left: -25px;
+        top: 0;
+
+        .g-content__booking__popup {
+            background-color: #0998E6;
+            padding: 40px;
+            color: white;
+            border-radius: 20px;
+            width: 25%;
+
+            &__element {
+                padding: 20px 0;
+
+                #close {
+                    float: right;
+                    font-size: 20px;
+                    cursor: pointer;
+                }
+
+                &__title {
+                    font-size: 20px;
+                }
+            }
+
+            &__container {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+
+                &__label {
+                    margin: 20px 0;
+                    width: 100%;
+                    color: #fff;
+                }
+
+                input{
+                    width: 100%;
+                    display: block;
+                    margin: 10px auto;
+                    padding: 10px 15px;
+                    border: none;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                }
+
+                #submit {
+                    width: 30%;
+                    padding: 10px 15px;
+                    margin-top: 20px;
+                    background: none;
+                    border: 1px solid #fff;
+                    color: #fff;
+                    -ms-flex-item-align: start;
+                    align-self: flex-start;
+                    -webkit-transition: 0.3s;
+                    transition: 0.3s;
+                    
+                    &:hover{
+                        background-color: #fff;
+                        color: rgba(28, 123, 201, 0.8);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    .heading__text {
+        font-family: 'Roboto';
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 10px 0;
+        color: #333;
+        font-size: 35px;
+    }
+
+    .heading_booking {
+        display: flex;
+        align-items: center;
+
+        &__paragraph{
+            font-size: 14px;
+            text-transform: initial;
+            color: #cccccc;
+            margin-left: 25px;
+        }
+    }
+
+    .heading__text-tickets {
+        margin: 10px 0 10px 0;
+    }
+
+    .heading__icon {
+        color: #999999;
+        font-size: 18px;
+        cursor: pointer;
+        margin-left: 20px;
+    }
+
+    &__statistics {
+        width: 20%;
+        padding: 20px;
+        margin: auto;
+        margin-bottom: 30px;
+        border-radius: 20px;
+        font-size: 20px;
+        color: white;
+
+        &__flights {
+            background-image: url(../img/stat1.png);
+            background-color: #cccccc;
+            background-position: center; /* Center the image */
+            background-size: cover;
+        }
+
+        &__kilometers {
+            background-image: url(../img/stat2.png);
+            background-color: #cccccc;
+            background-position: center; /* Center the image */
+            background-size: cover;
+        }
+
+        &__countries {
+            background-image: url(../img/stat3.png);
+            background-color: #cccccc;
+            background-position: center; /* Center the image */
+            background-size: cover;
+        }
+    }
+
+    &__item{
+        display: flex;
+        flex-wrap: wrap;
+
+        .g-content__map{
+            width: 90%;
+            height: 350px;
+            background-color: white;
+            border-radius: 20px;
+            margin: 20px auto;
+        }
+
+        @mixin pseudo-ready($position: absolute){
+            position: relative;
+            &::before, &::after{
+              content: '';
+              position: $position;
+            }
+        }
+
+        //TICKETS
+        .g-content__tickets {
+            width: 90%;
+            margin: auto;
+            margin-top: 20px;
+
+            .g-content__post__tickets__button {
+                background-color: #0998E6;
+                color: white;
+                width: 205px;
+                height: 45px;
+                font-size: 15px;
+                font-weight: 800;
+                border: none;
+                float: right;
+                margin-bottom: 20px;
+            }
+
+            .g-content__post__tickets__button span{
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+            .g-content__post__tickets__button span:after{
+                content: '+';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+            .g-content__post__tickets__button:hover span{
+                padding-right: 25px;
+            }
+
+            .g-content__post__tickets__button:hover span:after{
+                opacity: 1;
+                right: 0;
+
+            }
+  
+            .g-content__ticket{
+                width: 100%;
+                position: relative;
+                height: 100%;
+                background-color: rgb(211, 211, 211);
+                display: flex;
+                align-items: center;
+                margin-bottom: 2px;
+
+                &:before{
+                    content: '';
+                    box-sizing: border-box;
+                    position: absolute;
+                    width: 30px;
+                    height: 30px;
+                    background: white;
+                    border-radius: 50%;
+                    top: -13px;
+                    left: -15px;
+                    box-shadow: 0px 47px 0 0 white,
+                }
+
+                &__pen {
+                    color: grey;
+                    margin: auto;
+                    font-size: 20px;
+                }
+
+                &__info {
+                    color: white;
+                    margin: 40px;
+                    font-size: 20px;
+                    transition: 0.3s;
+                }
+
+                &__icon {
+                    font-size: 25px;
+                    color: #0998E6;
+                    margin-left: 50px;
+                    padding: 30px;
+                    cursor: default;
+
+                    &--grey {
+                        font-size: 25px;
+                        color: grey;
+                        margin-left: 50px;
+                        padding: 30px;
+                    }
+                }
+
+                &__info:hover {
+                    color: #0998E6;
+                }
+
+                &__location {
+                    font-size: 25px;
+                    color: grey;
+                    padding: 10px;;
+                }
+
+                &__location--grey {
+                    font-size: 25px;
+                    color: grey;
+                    padding: 10px;;
+                }
+
+                &__btn {
+                    width: 100px;
+                    margin-left: auto;
+                    padding: 20px;
+                }
+
+                &__places {
+                    display: flex;
+                   text-align: center;
+
+                    .g-content__ticket__from {
+                        font-size: 13px;
+                        padding-bottom: 5px;
+                        display: flex;
+                        flex-direction: column;
+                        padding: 10px;
+                        margin: 0 80px 0 80px;
+                    }
+
+                    .g-content__ticket__to {
+                        font-size: 13px;
+                        display: flex;
+                        flex-direction: column;
+                        padding: 10px;
+                        margin: 0 0 0 150px;
+                    }
+
+                    .g-content__ticket__to--grey {
+                        font-size: 15px;
+                        display: flex;
+                        flex-direction: column;
+                        padding: 10px;
+                        margin: 0 0 0 200px;
+                    }
+
+                    .g-content__ticket__from--grey {
+                        font-size: 15px;
+                        padding-bottom: 5px;
+                        display: flex;
+                        flex-direction: column;
+                        padding: 10px;
+                        margin: 0 80px 0 80px;
+                    }
+                }
+
+                &__link {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    
+}

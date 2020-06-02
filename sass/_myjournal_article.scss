@@ -1,0 +1,231 @@
+.j-content{
+    flex-grow: 5;
+    overflow: auto;
+    padding: 25px;
+    max-width: 1400px;
+
+    &__link{
+        color: #A8A8A8;
+        font-weight: 100;
+        text-transform: none;
+        font-size: 14px;
+       
+        &__delete{
+            margin-left: 10px;
+        }
+    }
+    &__section{
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        color: #333;
+        width: 90%;
+
+        &__title{
+            font-size: 25px;
+            margin: 20px 0 20px 0;
+            font-weight: 600;
+            font-family: 'Roboto';
+
+            &__egypt{
+                margin-top: 70px;
+            }
+        }
+        &__gallery{
+            margin-top: 20px;
+            width: 700px;
+            
+
+
+            &__image{
+                max-width: 27%;
+                height: 160px;
+                margin: 2px;
+
+                &__4{
+                    margin-left: 22px;
+                }
+                &__3{
+                    margin-left: 18px;
+                }
+            }
+        }
+        &__story{
+            width: 680px;
+            font-size: 14px;
+
+            &__link{
+                color: #333;
+            }
+        }
+    }
+    &__flex{
+        display: inline-flex;
+    }
+    &__practical{
+        display: flex;
+        flex-direction: column;
+        height: 545px;
+        width: 300px;
+        background-color: #F4F4F4;
+        border-radius: 20px;
+        margin-top: 12px;
+        padding: 22px;
+
+        &__top{
+            display: flex;
+            padding: 0 0 30px 0;
+            color: #A8A8A8;
+            font-size: 22px;
+            margin-top: 10px;
+            
+        }
+
+        &__title{
+            font-size: 15px;
+            color: #707070;
+            font-family: Roboto;
+            font-weight: 600;
+            padding-bottom: 20px;
+        }
+
+        &__rating{
+            width: 100px;
+            padding-bottom: 40px;
+        }
+        &__info{
+            font-size: 12px;
+            color: #333;
+            padding-bottom: 18px;
+            margin-top: 8px;
+        }
+        &__views{
+            font-size: 16px;
+            color: #A8A8A8;
+
+        }
+        &__users-photo{
+            width: 120px;
+            margin-top: 12px;
+        }
+    }
+    &__sections{
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        color: #333;
+
+        &__title{
+            font-size: 22px;
+            margin: 20px 0 20px 0;
+            font-weight: 600;
+            font-family: 'Roboto';
+
+            &__egypt {
+                margin: 50px 0 20px 0;
+            }
+        }
+
+        &__attractions{
+            display: flex;
+            flex-wrap: nowrap;
+            width: 75%;
+
+
+            &__image{
+                max-width:20%;
+                margin-left: 40px;
+                
+            }
+
+            &__text{
+                margin-top: 20px;
+                font-size: 14px;
+            }
+
+            &__title{
+                font-size: 16px;
+                color: #333;
+                margin-top: 10px;
+            }
+        }
+        &__accommodation{
+            width: 75%;
+
+            &__image{
+                max-width: 100%;
+                margin-top: 20px;
+                padding-bottom: 20px;
+            }
+
+            p {
+                padding: 5px;
+            }
+        }
+        &__reviews{
+            width: 75%;
+            background-color: #F4F4F4;
+            border-radius: 20px;
+            height: 110px;
+            margin-top: 10px;
+            align-items: center;
+            display: flex;
+
+            &__text{
+                margin-left: 5%;
+
+                h3 {
+                    font-size: 13px;
+                }
+
+                &__comment{
+                    margin-top: -20px;
+                    font-size: 13px;
+                }
+            }
+            &__image{
+                width: 50px;
+                margin-left: 20px;
+            }
+
+            &__stars{
+                width: 10%;
+                padding: 10px 0;
+                
+            }
+        }
+    }
+   
+    &__practical-info{
+        width: 350px;
+        height: 600px;
+        background-color:#F4F4F4;
+        border-radius: 20px;
+        
+    }
+    &__flex{
+        display: flex;
+    }
+}
+
+
+.heading{
+    font-family: 'Roboto';
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 0;
+    color: #333;
+
+    &--main{
+        
+        .heading__text{
+            font-size: 35px;
+        }
+    }
+}
+.fa-map-marker-alt{
+    color: #03A9F4;
+    font-size: 30px;
+    text-shadow: 8px 0 3px #A8A8A8;
+    padding-right: 20px;
+}

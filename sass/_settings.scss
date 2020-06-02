@@ -1,0 +1,96 @@
+/***SETTINGS***/
+.a-content {
+    flex-grow: 5;
+    overflow: auto;
+    padding: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    .heading__text {
+        font-family: 'Roboto';
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 10px 0;
+        color: #333;
+        font-size: 35px;
+    }
+    
+    &__item{
+        display: flex;
+        flex-direction: row;
+        
+        .a-content__settings {
+            width: 15%;
+            
+            .a-content__setting {
+                width: 100%;
+                height: 70px;
+                background-color: #F7F7F7;
+                margin-bottom: 15px;
+                display: flex;
+                align-items: center;
+            }     
+        }
+    }
+
+    .a-content__settings-main, .a-content__settings-main-password{
+        width: 65%;
+        height: 80%;
+        margin-left: 20px;
+        padding: 20px;
+        background-color: #F7F7F7;
+        
+        &__img{
+            width: 75px;
+            height: auto;
+            border-radius: 50%;
+            margin-left: 10px;
+        } 
+
+        &__heading{
+            margin-left: 10px;
+            font-size: 24px;
+        }
+
+        &__date{
+            font-size:13px;
+            margin-left: 10px;
+        }
+
+        &__information{
+            font-size: 12px;
+
+            &--paragraph{
+                font-size: 10px;
+            }
+        }
+
+        &__places{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            color: #333;
+
+            &__icon{
+                font-size: 10px;
+            }
+
+            #text {
+                border: none;
+                border-radius: 10px;
+                width: 40%;
+                height: 30px; 
+                margin-right: 40%;
+                float: right;
+            
+            }
+
+            .a-content__settings-main__place{
+                font-size: 15px;
+                margin-right: 20px;
+
+                
+            }
+        }
+    }
+}
