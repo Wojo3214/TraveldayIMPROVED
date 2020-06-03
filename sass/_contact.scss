@@ -228,14 +228,13 @@
 }
 **/
 
-.s-contact{
+.contact{
     display: flex;
     margin-top: 2%;
     padding: 25px 0;
-    flex-wrap: nowrap;
+    justify-content: space-between;
     color: #333;
     font-family: Roboto;
-    position: absolute;
 
     &__e-mail{
         margin-left:14px;

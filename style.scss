@@ -100,7 +100,17 @@ body{
                 width: 100%;
                 display: flex;
                 flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
                 padding: 0;
+
+                &__heading{
+                    width: 100%;
+                }
+
+                &__user{
+                    flex-grow: 1;
+                }
             }
         }
     }
@@ -177,6 +187,79 @@ body{
                 width: 35%;
                 padding: 15px 20px;
             }
+        }
+    }
+
+    //FEED
+    .f-content{
+        &__item{
+            .f-content__posts {
+                width: 100%;
+
+                .f-content__post{
+                    flex-direction: column;
+
+                    .f-content__post__info{
+                        padding: 20px 0;
+                        text-align: center;
+                    }
+
+                    &__img {
+                        width: 80px;
+                        height: 80px;
+                        padding: 20px;
+                    }
+    
+                    &__journal {
+                        width: 100px;
+                        margin-left: 0;
+                        padding: 20px;
+                    }
+                }
+            }
+
+            .f-content__also-like{
+                margin-bottom: 35px;
+            }
+        }
+    }
+
+    //CONTACT&SUPPORT
+    .s-content{
+        &__container{
+            flex-direction: column;
+            justify-content: center;
+            max-width: 100%;
+
+            &__section{
+                width: 100%;
+            }
+
+            &__item{
+                width: 100%;
+            }
+        }
+
+        .contact{
+            margin-bottom: 35px;
+            width: 100%;
+
+            .s-contact__e-mail{
+                &__icon{
+                    list-style-type: none;
+                }
+            }
+
+            .s-contact__social-media{
+               &__icon{
+                    margin-left: 0px;
+                }
+            }
+
+            i{
+                font-size: 25px;
+            }
+            
         }
     }
 }
