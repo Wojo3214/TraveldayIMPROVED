@@ -1986,8 +1986,11 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 90%;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 40px;
+  height: 80%;
 }
 
 .d-content__breadcrumb {
@@ -2011,8 +2014,8 @@
 }
 
 .d-content__details {
-  width: 330px;
-  height: 420px;
+  width: 30%;
+  height: 90%;
   background-color: #EEEEEE;
   border-radius: 20px;
   display: -webkit-inline-box;
@@ -2029,7 +2032,7 @@
 
 .d-content__details__photo {
   height: 100px;
-  width: 330px;
+  width: 100%;
 }
 
 .d-content__details__info {
@@ -2037,6 +2040,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
 }
 
 .d-content__details__flight {
@@ -2056,9 +2060,10 @@
 }
 
 .d-content__details__airoport {
-  font-size: 50px;
+  font-size: 4vw;
   font-weight: lighter;
   margin-left: -10px;
+  width: 95%;
 }
 
 .d-content__details__airoport__text {
@@ -2103,7 +2108,8 @@
 
 .d-content__details__hotel-details {
   font-weight: bolder;
-  margin-left: 40px;
+  width: 80%;
+  margin: auto;
 }
 
 .d-content__details__hotel-details__aphrodite {
@@ -2133,10 +2139,10 @@
 }
 
 .d-content__details__facilities {
-  margin-left: 40px;
   font-size: 18px;
-  margin-top: 26px;
+  margin: 26px auto 0 auto;
   font-weight: bolder;
+  width: 80%;
 }
 
 .d-content__details__facilities__icons {
@@ -2144,14 +2150,18 @@
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
-  margin-left: -20px;
-  margin-top: 16px;
+  margin: 16px 10px 0 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .d-content__details__facilities__icon {
   color: #0998E6;
-  margin-left: 20px;
   font-size: 25px;
+  margin-top: 10px;
 }
 
 .d-content__details__destination {
@@ -2181,12 +2191,10 @@
 }
 
 .d-content__details__destination__photo__weather__text {
-  margin-left: 48px;
-  font-size: 14px;
-}
-
-.d-content__details__destination__photo__weather__text__1 {
-  margin-left: 10px;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .d-content__details__destination__title2 {
@@ -2206,9 +2214,8 @@
 }
 
 .d-content__delimitation-line {
-  width: 240px;
+  width: 80%;
   border: 2px solid #cccccc;
-  margin-left: 40px;
   border-radius: 10px;
   margin-top: 20px;
 }
@@ -2586,6 +2593,15 @@ body {
         -ms-flex-positive: 1;
             flex-grow: 1;
   }
+  .d-content__container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .d-content__details {
+    width: 45%;
+    margin-top: 20px;
+  }
 }
 
 @media only screen and (max-width: 750px) {
@@ -2706,6 +2722,17 @@ body {
   }
   .s-content .contact i {
     font-size: 25px;
+  }
+  .d-content__container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .d-content__details {
+    width: 70%;
+  }
+  .d-content__details__airoport {
+    font-size: 10vw;
   }
 }
 /*# sourceMappingURL=style.css.map */

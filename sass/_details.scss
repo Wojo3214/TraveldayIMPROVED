@@ -13,8 +13,10 @@
         display: flex;
         justify-content: center;
         justify-content: space-between;
-        width: 90%;
+        width: 100%;
+        flex-wrap: wrap;
         margin-top: 40px;
+        height: 80%;
     }
 
     &__breadcrumb{
@@ -35,8 +37,8 @@
         }
     }
     &__details{
-        width: 330px;
-        height: 420px;
+        width: 30%;
+        height: 90%;
         background-color: #EEEEEE;
         border-radius: 20px;
         display: inline-flex;
@@ -48,10 +50,11 @@
         }
         &__photo{
             height: 100px;
-            width: 330px;
+            width: 100%;
         }
         &__info{
          flex-direction: column;
+         width: 100%;
         }
         &__flight{
             display: inline-flex;
@@ -66,9 +69,10 @@
             }
         }
         &__airoport{
-            font-size: 50px;
+            font-size: 4vw;
             font-weight: lighter;
             margin-left: -10px;
+            width: 95%;
 
             &__text{
                 display: inline-flex;
@@ -101,7 +105,8 @@
         }
         &__hotel-details{
             font-weight: bolder;
-            margin-left: 40px;
+            width: 80%;
+            margin: auto;
 
             &__aphrodite{
                 font-size: 18px;
@@ -124,21 +129,24 @@
             }
         }
         &__facilities{
-            margin-left: 40px;
             font-size: 18px;
-            margin-top: 26px;
+            margin: 26px auto 0 auto;
             font-weight: bolder;
+            width: 80%;
+
 
             &__icons{
                 display: flex;
                 list-style-type: none;
-                margin-left: -20px;
-                margin-top: 16px;
+                margin: 16px 10px 0 0;
+                flex-wrap: wrap;
+                margin: auto;
+                justify-content: space-around;
             }
             &__icon{
                 color: #0998E6;
-                margin-left: 20px;
                 font-size: 25px;
+                margin-top: 10px;
             }
         }
         &__destination{
@@ -162,12 +170,8 @@
                     display: flex;
 
                     &__text{
-                        margin-left: 48px;
-                        font-size: 14px;
-
-                        &__1{
-                            margin-left: 10px;
-                        }
+                        width: 80%;
+                        display: flex;
                     }
                 }
             }
@@ -188,9 +192,8 @@
         }
     }
     &__delimitation-line{
-        width: 240px;
+        width: 80%;
         border: 2px solid #cccccc;
-        margin-left: 40px;
         border-radius: 10px;
         margin-top: 20px;
     }

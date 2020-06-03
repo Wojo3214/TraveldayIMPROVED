@@ -116,7 +116,17 @@ body{
     }
 
     //Booking details
-    
+    .d-content{
+
+        &__container {
+            justify-content: center;
+        }
+
+        &__details{
+            width: 45%;
+            margin-top: 20px;
+        }
+    }
 }
 
 @media only screen and (max-width: 750px){
@@ -261,5 +271,22 @@ body{
             }
             
         }
+    }
+
+     //Booking details
+    .d-content{
+
+        &__container {
+            justify-content: center;
+        }
+
+        &__details{
+            width: 70%;
+        
+            &__airoport {
+                font-size: 10vw;
+            }
+        }
+
     }
 }
