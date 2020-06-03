@@ -121,6 +121,7 @@
 
     &__statistics {
         width: 20%;
+        height: 70px;
         padding: 20px;
         margin: auto;
         margin-bottom: 30px;
@@ -289,6 +290,8 @@
                 &__places {
                     display: flex;
                    text-align: center;
+                   justify-content: space-between;
+                    width: 50%;
 
                     .g-content__ticket__from {
                         font-size: 13px;
@@ -296,7 +299,7 @@
                         display: flex;
                         flex-direction: column;
                         padding: 10px;
-                        margin: 0 80px 0 80px;
+                        margin: auto;
                     }
 
                     .g-content__ticket__to {
@@ -304,7 +307,7 @@
                         display: flex;
                         flex-direction: column;
                         padding: 10px;
-                        margin: 0 0 0 150px;
+                        margin: auto;
                     }
 
                     .g-content__ticket__to--grey {

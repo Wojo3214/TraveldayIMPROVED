@@ -268,12 +268,11 @@ body{
 
             i{
                 font-size: 25px;
-            }
-            
+            }   
         }
     }
 
-     //Booking details
+    //Booking details
     .d-content{
 
         &__container {
@@ -287,6 +286,42 @@ body{
                 font-size: 10vw;
             }
         }
-
     }
+
+    //Booking details
+    .g-content {
+        
+
+        &__statistics {
+            width: 80%;
+        }
+
+        &__post {
+
+            &__tickets {
+                &__button {
+                    margin: -30px auto;
+                }
+            }
+
+        }
+    }
+
+    .g-content__tickets {
+        height: 200px;
+        
+        &:before{
+            box-shadow: 0;
+            background: none;
+        }
+    }
+
+    .g-content__ticket{
+
+        &:before{
+            box-shadow: 0;
+            background: none;
+        }
+    }
+
 }
