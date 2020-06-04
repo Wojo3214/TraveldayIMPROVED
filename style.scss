@@ -127,6 +127,30 @@ body{
             margin-top: 20px;
         }
     }
+
+     //Booking
+     .g-content {
+
+        &__booking__popup__background{
+
+            .g-content__booking__popup {
+                width: 40%;
+                height: 85%;
+                padding: 15px 20px;
+
+                &__element {
+                    padding: 10px 0;
+                }
+
+                &__container {
+                    input {
+                        margin: 10px auto;
+                        padding: 6px 15px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 750px){
@@ -288,9 +312,42 @@ body{
         }
     }
 
-    //Booking details
+    //Booking
     .g-content {
-        
+
+        &__booking__popup__background{
+            width:100%;
+
+            .g-content__booking__popup {
+                width: 80%;
+                height: 85%;
+                padding: 15px 20px;
+
+                &__element {
+                    padding: 10px 0;
+                }
+
+                &__container {
+                    input {
+                        margin: 10px auto;
+                        padding: 6px 15px;
+                    }
+                }
+            }
+        }
+
+        .heading_booking {
+            flex-wrap: wrap;
+        }
+    
+        .g-content__tickets {
+           
+            margin: 10% auto 15% auto;
+        }
+       
+        &__ticket {
+            flex-wrap: wrap;
+        }
 
         &__statistics {
             width: 80%;
@@ -305,23 +362,69 @@ body{
             }
 
         }
-    }
 
-    .g-content__tickets {
-        height: 200px;
-        
-        &:before{
-            box-shadow: 0;
-            background: none;
+        &__item { 
+            .g-content__tickets {
+
+                &--lower {
+                    margin-bottom: 60%;
+                }
+
+                .g-content__ticket{
+                    justify-content: space-around;
+                    height: 50%;
+
+                    &:before{
+                        display: none;
+                    }
+
+                    &__icon {
+                        margin-left: 0;
+                        padding: 0 30px 0 0;
+
+                        &--grey {
+                            margin-left: 0;
+                            padding: 0 30px 0 0;
+                        }
+                    }
+
+                    &__data {
+                        margin: 30px 0;
+                    }
+
+                    &__info {
+                        margin: 30px 0 30px 0;
+                    }
+
+                    &__location {
+                        font-size: 20px;
+                        color: grey;
+                        padding: 10px;;
+                    }
+
+                    &__location--grey {
+                        font-size: 20px;
+                        color: grey;
+                        padding: 10px;
+                    }
+
+                    &__pen {
+                        color: grey;
+                        margin: 30px 0 30px 0;
+                        font-size: 20px;
+                        padding: 0;
+                    }
+
+                    &__places {
+                        width: 100%;
+                    }
+                }
+
+            }
         }
     }
+    
 
-    .g-content__ticket{
-
-        &:before{
-            box-shadow: 0;
-            background: none;
-        }
-    }
+    
 
 }

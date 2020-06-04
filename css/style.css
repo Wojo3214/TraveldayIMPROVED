@@ -2607,6 +2607,18 @@ body {
     width: 45%;
     margin-top: 20px;
   }
+  .g-content__booking__popup__background .g-content__booking__popup {
+    width: 40%;
+    height: 85%;
+    padding: 15px 20px;
+  }
+  .g-content__booking__popup__background .g-content__booking__popup__element {
+    padding: 10px 0;
+  }
+  .g-content__booking__popup__background .g-content__booking__popup__container input {
+    margin: 10px auto;
+    padding: 6px 15px;
+  }
 }
 
 @media only screen and (max-width: 750px) {
@@ -2739,24 +2751,81 @@ body {
   .d-content__details__airoport {
     font-size: 10vw;
   }
+  .g-content__booking__popup__background {
+    width: 100%;
+  }
+  .g-content__booking__popup__background .g-content__booking__popup {
+    width: 80%;
+    height: 85%;
+    padding: 15px 20px;
+  }
+  .g-content__booking__popup__background .g-content__booking__popup__element {
+    padding: 10px 0;
+  }
+  .g-content__booking__popup__background .g-content__booking__popup__container input {
+    margin: 10px auto;
+    padding: 6px 15px;
+  }
+  .g-content .heading_booking {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .g-content .g-content__tickets {
+    margin: 10% auto 15% auto;
+  }
+  .g-content__ticket {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
   .g-content__statistics {
     width: 80%;
   }
   .g-content__post__tickets__button {
     margin: -30px auto;
   }
-  .g-content__tickets {
-    height: 200px;
+  .g-content__item .g-content__tickets--lower {
+    margin-bottom: 60%;
   }
-  .g-content__tickets:before {
-    -webkit-box-shadow: 0;
-            box-shadow: 0;
-    background: none;
+  .g-content__item .g-content__tickets .g-content__ticket {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 50%;
   }
-  .g-content__ticket:before {
-    -webkit-box-shadow: 0;
-            box-shadow: 0;
-    background: none;
+  .g-content__item .g-content__tickets .g-content__ticket:before {
+    display: none;
+  }
+  .g-content__item .g-content__tickets .g-content__ticket__icon {
+    margin-left: 0;
+    padding: 0 30px 0 0;
+  }
+  .g-content__item .g-content__tickets .g-content__ticket__icon--grey {
+    margin-left: 0;
+    padding: 0 30px 0 0;
+  }
+  .g-content__item .g-content__tickets .g-content__ticket__data {
+    margin: 30px 0;
+  }
+  .g-content__item .g-content__tickets .g-content__ticket__info {
+    margin: 30px 0 30px 0;
+  }
+  .g-content__item .g-content__tickets .g-content__ticket__location {
+    font-size: 20px;
+    color: grey;
+    padding: 10px;
+  }
+  .g-content__item .g-content__tickets .g-content__ticket__location--grey {
+    font-size: 20px;
+    color: grey;
+    padding: 10px;
+  }
+  .g-content__item .g-content__tickets .g-content__ticket__pen {
+    color: grey;
+    margin: 30px 0 30px 0;
+    font-size: 20px;
+    padding: 0;
+  }
+  .g-content__item .g-content__tickets .g-content__ticket__places {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
