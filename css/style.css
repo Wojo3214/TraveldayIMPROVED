@@ -1202,7 +1202,6 @@
   font-weight: 800;
   border: none;
   float: right;
-  position: absolute;
   right: 150px;
   top: 150px;
 }
@@ -2268,7 +2267,7 @@
           flex-direction: column;
   font-size: 16px;
   color: #333;
-  width: 90%;
+  width: 70%;
 }
 
 .j-content__section__title {
@@ -2284,7 +2283,7 @@
 
 .j-content__section__gallery {
   margin-top: 20px;
-  width: 700px;
+  width: 90%;
 }
 
 .j-content__section__gallery__image {
@@ -2324,8 +2323,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 545px;
-  width: 300px;
+  height: 90%;
+  width: 30%;
   background-color: #F4F4F4;
   border-radius: 20px;
   margin-top: 12px;
@@ -2450,6 +2449,7 @@
 
 .j-content__sections__reviews__text {
   margin-left: 5%;
+  padding: 15px;
 }
 
 .j-content__sections__reviews__text h3 {
@@ -2618,6 +2618,11 @@ body {
   .g-content__booking__popup__background .g-content__booking__popup__container input {
     margin: 10px auto;
     padding: 6px 15px;
+  }
+  .z-content__item .z-content__posts .z-content__post__info__button {
+    font-size: 15px;
+    right: 90px;
+    top: 120px;
   }
 }
 
@@ -2826,6 +2831,135 @@ body {
   }
   .g-content__item .g-content__tickets .g-content__ticket__places {
     width: 100%;
+  }
+  .c-content__achievements-container {
+    margin: -25px 0 0 0;
+    width: 100%;
+    height: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    right: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 13px;
+  }
+  .c-content__achievements-container__date {
+    font-size: 13px;
+  }
+  .c-content__achievements-container__icons {
+    font-size: 15px;
+  }
+  .c-content__achievements-container__places {
+    width: 80%;
+    margin-left: 0;
+    right: 0;
+    top: 0;
+    position: relative;
+  }
+  .z-content {
+    margin-bottom: 50px;
+  }
+  .z-content__journal__popup__background {
+    width: 100%;
+  }
+  .z-content__journal__popup__background .z-content__journal__popup {
+    width: 60%;
+    padding: 15px 30px;
+  }
+  .z-content__journal__popup__background .z-content__journal__popup__container #submit {
+    width: 50%;
+  }
+  .z-content .heading_journal {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .z-content .heading_journal__paragraph {
+    margin: 0 0 10px 0;
+    width: 80%;
+  }
+  .z-content .heading__icon {
+    margin-bottom: 10px;
+  }
+  .z-content__item .z-content__posts .z-content__post__info__button {
+    margin: 0 22px 20px 0;
+  }
+  .j-content {
+    margin-bottom: 80px;
+  }
+  .j-content__section {
+    width: 100%;
+  }
+  .j-content__section__title {
+    margin: 20px 0 20px 0;
+  }
+  .j-content__section__gallery {
+    width: 100%;
+    height: 50%;
+  }
+  .j-content__section__gallery__image {
+    max-width: 100%;
+    height: 95px;
+  }
+  .j-content__section__story {
+    width: 100%;
+  }
+  .j-content__flex {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  .j-content__practical {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 90%;
+    width: 30%;
+    display: none;
+  }
+  .j-content__sections__attractions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    width: 100%;
+  }
+  .j-content__sections__attractions__image {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    margin: 20px 0;
+  }
+  .j-content__sections__accommodation {
+    width: 100%;
+  }
+  .j-content__sections__accommodation__image {
+    max-width: 100%;
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+  .j-content__sections__accommodation p {
+    padding: 5px;
+  }
+  .j-content__sections__reviews {
+    width: 100%;
+    height: 35%;
+  }
+  .j-content__sections__reviews__text {
+    margin-left: 5%;
+  }
+  .j-content__sections__reviews__stars {
+    width: 30%;
+    padding: 10px 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
