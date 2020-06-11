@@ -234,6 +234,18 @@ body{
         &__item--vertical{
             margin-bottom: 100px;
         }
+
+        &__item{ 
+            .c-content__days-left{
+                &:before{
+                    display: none;
+                }
+
+                &:after{
+                    display: none;
+                }
+            }
+        }
     }
 
     .l-grid--login{

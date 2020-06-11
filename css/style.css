@@ -2685,6 +2685,12 @@ body {
   .c-content__item--vertical {
     margin-bottom: 100px;
   }
+  .c-content__item .c-content__days-left:before {
+    display: none;
+  }
+  .c-content__item .c-content__days-left:after {
+    display: none;
+  }
   .l-grid--login .log-in__logo {
     width: auto;
     height: 70px;
