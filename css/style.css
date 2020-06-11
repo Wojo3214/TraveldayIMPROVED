@@ -1607,7 +1607,7 @@
 }
 
 .a-content__item .a-content__settings {
-  width: 15%;
+  width: 25%;
 }
 
 .a-content__item .a-content__settings .a-content__setting {
@@ -1623,8 +1623,12 @@
           align-items: center;
 }
 
+.a-content__item .a-content__settings .a-content__setting__info {
+  padding-left: 15px;
+}
+
 .a-content .a-content__settings-main, .a-content .a-content__settings-main-password {
-  width: 65%;
+  width: 75%;
   height: 80%;
   margin-left: 20px;
   padding: 20px;
@@ -1675,10 +1679,13 @@
 .a-content .a-content__settings-main__places #text, .a-content .a-content__settings-main-password__places #text {
   border: none;
   border-radius: 10px;
-  width: 40%;
+  width: 60%;
   height: 30px;
-  margin-right: 40%;
+  margin-right: 10%;
   float: right;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px;
 }
 
 .a-content .a-content__settings-main__places .a-content__settings-main__place, .a-content .a-content__settings-main-password__places .a-content__settings-main__place {
@@ -2523,7 +2530,14 @@ body {
   overflow: hidden;
 }
 
+.c-content__button-nav {
+  display: none;
+}
+
 @media screen and (max-width: 900px) {
+  .c-content__button-nav {
+    display: none;
+  }
   .c-content {
     max-width: 850px;
     margin: 0 auto;
@@ -2627,6 +2641,9 @@ body {
 }
 
 @media only screen and (max-width: 750px) {
+  .c-content__button-nav {
+    display: block;
+  }
   .nav {
     position: fixed;
     left: -1000px;
@@ -2832,31 +2849,45 @@ body {
   .g-content__item .g-content__tickets .g-content__ticket__places {
     width: 100%;
   }
+  .c-content {
+    margin-bottom: 80px;
+  }
   .c-content__achievements-container {
-    margin: -25px 0 0 0;
+    margin: -25px 0 0 -25px;
     width: 100%;
     height: 100%;
+    font-size: 13px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    right: 0;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-size: 13px;
   }
-  .c-content__achievements-container__date {
+  .c-content__achievements-container__info--upper {
+    padding-bottom: 20px;
+  }
+  .c-content__achievements-container .c-content__achievements-container__date {
     font-size: 13px;
   }
   .c-content__achievements-container__icons {
     font-size: 15px;
   }
+  .c-content__achievements-container__icons__container {
+    padding: 5px;
+  }
+  .c-content__achievements-container__icons--text {
+    font-size: 13px;
+    padding: 5px 15px 0 0;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
   .c-content__achievements-container__places {
-    width: 80%;
+    width: 70%;
+    height: 80%;
     margin-left: 0;
-    right: 0;
-    top: 0;
-    position: relative;
+    top: 5%;
+    right: unset;
+  }
+  .c-content__item--vertical {
+    margin-bottom: 0;
   }
   .z-content {
     margin-bottom: 50px;
@@ -2960,6 +2991,53 @@ body {
   .j-content__sections__reviews__stars {
     width: 30%;
     padding: 10px 0;
+  }
+  /***SETTINGS***/
+  .a-content {
+    margin-bottom: 80px;
+  }
+  .a-content__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .a-content__item .a-content__settings {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    font-size: 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 10px;
+  }
+  .a-content__item .a-content__settings .a-content__setting {
+    height: 40px;
+    width: 30%;
+    margin: 2px 2px 10px 2px;
+  }
+  .a-content .a-content__settings-main {
+    margin: auto;
+    width: 80%;
+  }
+  .a-content .a-content__settings-main__img {
+    width: 50px;
+    padding-bottom: 5px;
+  }
+  .a-content .a-content__settings-main__places .a-content__settings-main__place {
+    font-size: 10px;
+  }
+  .a-content .a-content__settings-main__places #text {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 5px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 5px;
   }
 }
 /*# sourceMappingURL=style.css.map */

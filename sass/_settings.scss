@@ -20,7 +20,7 @@
         flex-direction: row;
         
         .a-content__settings {
-            width: 15%;
+            width: 25%;
             
             .a-content__setting {
                 width: 100%;
@@ -29,12 +29,16 @@
                 margin-bottom: 15px;
                 display: flex;
                 align-items: center;
+
+                &__info {
+                    padding-left: 15px;
+                }
             }     
         }
     }
 
     .a-content__settings-main, .a-content__settings-main-password{
-        width: 65%;
+        width: 75%;
         height: 80%;
         margin-left: 20px;
         padding: 20px;
@@ -78,10 +82,12 @@
             #text {
                 border: none;
                 border-radius: 10px;
-                width: 40%;
+                width: 60%;
                 height: 30px; 
-                margin-right: 40%;
+                margin-right: 10%;
                 float: right;
+                box-sizing: border-box;
+                padding: 5px;
             
             }
 
