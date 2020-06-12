@@ -545,6 +545,7 @@ body{
 
         .heading_journal {
             flex-direction: column;
+            align-items: unset;
 
             &__paragraph{
                 margin: 0 0 10px 0;
@@ -554,6 +555,7 @@ body{
 
         .heading__icon {
             margin-bottom: 10px;
+            margin-left: 0;
         }
 
         &__item{

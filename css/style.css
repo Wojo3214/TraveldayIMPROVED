@@ -2913,6 +2913,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
   }
   .z-content .heading_journal__paragraph {
     margin: 0 0 10px 0;
@@ -2920,6 +2923,7 @@ body {
   }
   .z-content .heading__icon {
     margin-bottom: 10px;
+    margin-left: 0;
   }
   .z-content__item .z-content__posts .z-content__post__info__button {
     margin: 0 22px 20px 0;
