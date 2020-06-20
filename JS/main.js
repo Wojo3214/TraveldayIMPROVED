@@ -13,7 +13,7 @@ $(document).ready(function(){
 
     //Counting days left to upcoming trip 
     var today = new Date();
-    var upcomingTrip = new Date(today.getFullYear(),05,20);
+    var upcomingTrip = new Date(today.getFullYear(),05,23);
 
     var oneDay = 1000*60*60*24;
     var score = Math.round((upcomingTrip.getTime()-today.getTime())/(oneDay));

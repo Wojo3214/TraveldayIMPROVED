@@ -376,7 +376,7 @@ html {
 .c-content__item .c-content__days-left .c-content__days-left__num {
   font-size: 32px;
   font-weight: 800;
-  padding: 10px 15px;
+  padding: 10px 22px;
   border: 5px solid #333;
   border-radius: 10px;
 }
@@ -2673,7 +2673,7 @@ body {
     left: 45px;
   }
   .c-content__item .c-content__days-left .c-content__days-left__num {
-    padding: 5px 10px;
+    padding: 10px 22px;
     font-size: 32px;
   }
   .l-grid--login .log-in__container__btn-submit {
@@ -2780,12 +2780,6 @@ body {
   }
   .c-content__item--vertical {
     margin-bottom: 100px;
-  }
-  .c-content__item .c-content__days-left:before {
-    display: none;
-  }
-  .c-content__item .c-content__days-left:after {
-    display: none;
   }
   .l-grid--login .log-in__logo {
     width: auto;
