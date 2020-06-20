@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;;
+}
+
 @import 'sass/nav';
 @import 'sass/dashboard';
 @import 'sass/booking';
@@ -426,11 +430,11 @@ body{
 
                     &__icon {
                         margin-left: 0;
-                        padding: 0 30px 0 0;
+                        padding: 20px;
 
                         &--grey {
                             margin-left: 0;
-                            padding: 0 30px 0 0;
+                            padding: 20px;
                         }
                     }
 

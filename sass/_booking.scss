@@ -9,6 +9,31 @@
     position: relative;
     width: 60%;
 
+   &__scroll-up{
+       position: fixed;
+       bottom: 70px;
+       right: 30px;
+       border-radius: 50%;
+       width: 20px;
+       height: 20px;
+       padding: 10px;
+       background-color: #fff;
+       border: #0998E6 2px solid;
+       transition: ease-out 0.2s;
+
+       i{
+           color: #0998E6;
+           font-size: 20px;
+           margin-left: 1px;
+       }
+   }
+   &__scroll-up:hover{
+        background-color: #0998E6;
+        i{
+            color: #fff;
+        }
+    }
+
     &__booking__popup__background{
         width: 80%;
         height: 100%;
@@ -86,6 +111,71 @@
             }
         }
     }
+
+    #marker {
+        background-image: url('https://cdn.pixabay.com/photo/2016/10/18/21/16/plaza-espana-1751442_1280.jpg');
+        background-color: red;
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    #mark2 {
+        background-image: url('https://cdn.pixabay.com/photo/2016/07/27/17/43/tunisia-1545828_1280.jpg');
+        background-color: greenyellow;
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    #mark3 {
+        background-image: url('https://cdn.pixabay.com/photo/2020/02/07/19/26/portugal-4828134_1280.jpg');
+        background-color: greenyellow;
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    #mark4 {
+        background-image: url('https://cdn.pixabay.com/photo/2015/07/02/10/46/hot-air-ballons-828967_1280.jpg');
+        background-color: greenyellow;
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    #mark5 {
+        background-image: url('https://cdn.pixabay.com/photo/2018/04/25/09/26/eiffel-tower-3349075_1280.jpg');
+        background-color: greenyellow;
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    #mark6 {
+        background-image: url('https://cdn.pixabay.com/photo/2015/11/14/20/30/the-old-city-1043628_1280.jpg');
+        background-color: greenyellow;
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .mapboxgl-popup {
+        max-width: 200px;
+    }
+
 
     .heading__text {
         font-family: 'Roboto';

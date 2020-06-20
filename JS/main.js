@@ -129,6 +129,12 @@ $(document).ready(function(){
         });
     });
 
+    //Scroll up btn
+    $(window).scroll(function(){
+        if($(this).scrollTop()>100) $('.g-content__scroll-up').fadeIn();
+        else $('.g-content__scroll-up').fadeOut();
+    });
+
     //My booking popup hidden from the beggining
     $(".g-content__booking__popup").hide();
     $(".g-content__booking__popup__background").hide();

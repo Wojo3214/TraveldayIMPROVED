@@ -54,29 +54,43 @@
         </nav>
         <main class="g-content">
             <!-- INFO ICON WITH THE INFORMATION ON CLICK -->
-            <header class="heading heading--main heading_booking">
+            <header class="heading heading--main heading_booking" id="top">
                 <h1 class="heading__text">My Booking</h1><i class="fas fa-info-circle heading__icon" id="show"></i>
                 <p class="heading_booking__paragraph">Here you can find a map with visited and places-to-be visited. Click on an info icon down below<br>to have a look on detials of fligts, accomondation and destination.</p>
             </header>
             <div class="g-content__item">
-                <div id="map" class="g-content__map"></div>
+                <div id="map" class="g-content__map">
+                    <section id="section" class="map__section">
+                        <p class="map__section__text">
+                            Denmark<br>
+                            Portugal<br>
+                            Spain <br>
+                            Tunisia<br>
+                            Turkey <br>
+                            Egypt<br>
+                            Czech Republic<br>
+                            France<br>
+                            Greece<br>
+                        </p>
+                    </section>
+                </div>
                 <!-- STATISTICS UNDER THE MAP -->
                 <div class="g-content__statistics g-content__statistics__flights">
                     <div class="g-content__statistics__info">
                         <h4 class="g-content__statistics-name">Total flights</h4>
-                        <p class="g-content__statistics-numbers">50</p>
+                        <p class="g-content__statistics-numbers">15</p>
                     </div>
                 </div>
                 <div class="g-content__statistics g-content__statistics__kilometers">
                     <div class="g-content__statistics__info">
                         <h4 class="g-content__statistics-name">Kilometers</h4>
-                        <p class="g-content__statistics-numbers">10000</p>
+                        <p class="g-content__statistics-numbers">15764</p>
                     </div>
                 </div>
                 <div class="g-content__statistics g-content__statistics__countries">
                     <div class="g-content__statistics__info">
                         <h4 class="g-content__statistics-name">Visited Countries</h4>
-                        <p class="g-content__statistics-numbers">20</p>
+                        <p class="g-content__statistics-numbers">6</p>
                     </div>
                 </div>
                 <div class="g-content__tickets g-content__tickets--upper">
@@ -160,8 +174,10 @@
                 </div>
             </div>
             <div class="c-content__button-nav"><i class="fas fa-bars"></i></div>
+            <div class="g-content__scroll-up"><a href="#top"><i class="fas fa-chevron-up"></i></a></div>
         </main>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../JS/main.js"></script>
     <script
         src="https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js"
@@ -169,6 +185,26 @@
     ></script>
     <script>
          /********* MAPBOX**********/
+
+         $(".map__section__text").css({
+            "font-size": "20px",
+            "font-family": "'Quicksand', sans-serif",
+            "padding": "50px"
+        });
+
+        $("section").hide();
+
+            $(".map__section").css({
+                "background-color": "#0f0f0f",
+                "font-size": "20px",
+                "color": "white",
+                "width": "100%",
+                "margin-top": "65px",
+                "text-align": "center",
+                "z-index": "99",
+                "position": "absolute",
+                "height": "91%"
+            });
 
         mapboxgl.accessToken = 'pk.eyJ1IjoibWFkZWVsZSIsImEiOiJjazdkMWF3NjIwNTBiM2lud2k3cjY0Njl5In0.d6TBUltXIwgnMsKbwESW7g';
         var map = new mapboxgl.Map({
@@ -178,109 +214,97 @@
         zoom: 3
         });
         
-        // Aarhus
-        var origin = [10.231, 56.150];
-        
-        // Nessebar
-        var destination = [27.736, 42.658];
+        var monument = [-3.7492, 40.4637];
+        let mon2 = [9.5375, 33.8869];
+        let mon3 = [-8.2245, 39.3999];
+        let mon4 = [35.2433, 38.9637];
+        let mon5 = [2.3522, 48.8566];
+        let mon6 = [10.2039,56.1629];
 
-        /*taken from https://docs.mapbox.com/mapbox-gl-js/example/animate-point-along-route/*/
-        
-        // A simple line from origin to destination.
-        var route = {
-            'type': 'FeatureCollection',
-            'features': [
-            {
-            'type': 'Feature',
-            'geometry': {
-            'type': 'LineString',
-            'coordinates': [origin, destination]
-                     }
-        }
-        ]
-        };
-        
-        // A single point that animates along the route.
-        // Coordinates are initially set to origin.
-        var point = {
-        'type': 'FeatureCollection',
-        'features': [
-        {
-        'type': 'Feature',
-        'properties': {},
-        'geometry': {
-        'type': 'Point',
-        'coordinates': origin
-        }
-        }
-        ]
-        };
-        
-        // Calculate the distance in kilometers between route start/end point.
-        var lineDistance = turf.lineDistance(route.features[0], 'kilometers');
-        
-        var arc = [];
-        
-        // Number of steps to use in the arc and animation, more steps means
-        // a smoother arc and animation, but too many steps will result in a
-        // low frame rate
-        var steps = 500;
-        
-        // Draw an arc between the `origin` & `destination` of the two points
-        for (var i = 0; i < lineDistance; i += lineDistance / steps) {
-        var segment = turf.along(route.features[0], i, 'kilometers');
-        arc.push(segment.geometry.coordinates);
-        }
-        
-        // Update the route with calculated arc coordinates
-        route.features[0].geometry.coordinates = arc;
-        
-        // Used to increment the value of the point measurement against the route.
-        var counter = 0;
-        
-        map.on('load', function() {
-        // Add a source and layer displaying a point which will be animated in a circle.
-        map.addSource('route', {
-        'type': 'geojson',
-        'data': route
-        });
-        
-        map.addSource('point', {
-        'type': 'geojson',
-        'data': point
-        });
-        
-        map.addLayer({
-        'id': 'route',
-        'source': 'route',
-        'type': 'line',
-        'paint': {
-        'line-width': 2,
-        'line-color': '#007cbf'
-        }
-        });
-        
-    })          
-    // Update point geometry to a new position based on counter denoting
-// the index to access the arc.
-point.features[0].geometry.coordinates =
-route.features[0].geometry.coordinates[counter];
- 
-// Calculate the bearing to ensure the icon is rotated to match the route arc
-// The bearing is calculate between the current point and the next point, except
-// at the end of the arc use the previous point and the current point
-point.features[0].properties.bearing = turf.bearing(
-turf.point(
-route.features[0].geometry.coordinates[
-counter >= steps ? counter - 1 : counter
-]
-),
-turf.point(
-route.features[0].geometry.coordinates[
-counter >= steps ? counter : counter + 1
-]
-)
-);
+        // create the popups
+        var popup = new mapboxgl.Popup({
+            offset: 25
+        }).setText(
+            'Spain'
+        );
+
+        let pop2 = new mapboxgl.Popup({
+            offset: 25
+        }).setText(
+            'Tunisia'
+        );
+
+        let pop3 = new mapboxgl.Popup({
+            offset: 25
+        }).setText(
+            'Portugal'
+        );
+        let pop4 = new mapboxgl.Popup({
+            offset: 25
+        }).setText(
+            'Turkey'
+        );
+        let pop5 = new mapboxgl.Popup({
+            offset: 25
+        }).setText(
+            'France'
+        );
+        let pop6 = new mapboxgl.Popup({
+            offset: 25
+        }).setText(
+            'Denmark'
+        );
+
+
+        // create DOM element for the marker
+        var el = document.createElement('div');
+        el.id = 'marker';
+
+        var el2 = document.createElement('div');
+        el2.id = 'mark2';
+
+        var el3 = document.createElement('div');
+        el3.id = 'mark3';
+
+        var el4 = document.createElement('div');
+        el4.id = 'mark4';
+
+        var el5 = document.createElement('div');
+        el5.id = 'mark5';
+
+        var el6 = document.createElement('div');
+        el6.id = 'mark6';
+
+        // create the marker
+        new mapboxgl.Marker(el)
+            .setLngLat(monument)
+            .setPopup(popup) // sets a popup on this marker
+            .addTo(map);
+
+        new mapboxgl.Marker(el2)
+            .setLngLat(mon2)
+            .setPopup(pop2) // sets a popup on this marker
+            .addTo(map);
+
+        new mapboxgl.Marker(el3)
+            .setLngLat(mon3)
+            .setPopup(pop3) // sets a popup on this marker
+            .addTo(map);
+
+        new mapboxgl.Marker(el4)
+            .setLngLat(mon4)
+            .setPopup(pop4) // sets a popup on this marker
+            .addTo(map);
+
+        new mapboxgl.Marker(el5)
+            .setLngLat(mon5)
+            .setPopup(pop5) // sets a popup on this marker
+            .addTo(map);
+
+         new mapboxgl.Marker(el6)
+            .setLngLat(mon6)
+            .setPopup(pop6) // sets a popup on this marker
+            .addTo(map);
     </script>
 </body>
 </html>
